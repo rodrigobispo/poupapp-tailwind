@@ -14,7 +14,7 @@ export const Button = ({ children, ...props }) => {
         justify-center
         cursor-pointer
         gap-2
-        rounded-[24px]
+        rounded-3xl
         text-base
         leading-[120%]
         hover:opacity-80
