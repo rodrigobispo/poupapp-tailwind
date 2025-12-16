@@ -1,8 +1,11 @@
 import { Aside } from './components/Aside'
 import Card from './components/Card';
 import { Container } from './components/Container/index';
+import { DailyBudget } from './components/DailyBudget';
 import { Main } from './components/Main';
+import { SavingStatus } from './components/SavingsStatus';
 import { SearchInput } from './components/SearchInput';
+import { Transactions } from './components/Transactions';
 import { Typography } from './components/Typography';
 
 function App() {
@@ -21,13 +24,13 @@ function App() {
               Veja como estão suas finanças hoje.
             </Typography>
           </div>
-          <section>
+          <section className='grid grid-cols-2 items-stretch gap-5'>
             <Card>
               <Card.Header>
                 Orçamento diário disponível
               </Card.Header>
               <Card.Body>
-                R$ 200,00
+                <DailyBudget value={35}></DailyBudget>
               </Card.Body>
             </Card>
             <Card>
@@ -35,7 +38,7 @@ function App() {
                 Progresso da meta financeira
               </Card.Header>
               <Card.Body>
-                R$ 200,00
+                <SavingStatus percent={20} />
               </Card.Body>
             </Card>
             <Card>
@@ -43,7 +46,7 @@ function App() {
                 Movimentação financeira
               </Card.Header>
               <Card.Body>
-                R$ 200,00
+                <Transactions />
               </Card.Body>
             </Card>
             <Card>
