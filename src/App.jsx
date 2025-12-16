@@ -1,3 +1,4 @@
+import { Accounts } from './components/Accounts';
 import { Aside } from './components/Aside'
 import Card from './components/Card';
 import { Container } from './components/Container/index';
@@ -54,7 +55,7 @@ function App() {
                 Minhas contas
               </Card.Header>
               <Card.Body>
-                R$ 200,00
+                <Accounts />
               </Card.Body>
             </Card>
           </section>
